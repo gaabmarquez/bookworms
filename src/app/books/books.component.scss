@@ -1,0 +1,54 @@
+.books-container {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 10px;
+
+  .img-container {
+    height: 240px;
+    width: 150px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .book-card {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 10px;
+    padding-top: 10px;
+
+    .book-info-container {
+      min-height: 400px;
+      margin-bottom: 2em;
+      .book-name {
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+      .book-icon {
+        font-size: 5em;
+        margin-top: 1em;
+      }
+      .author {
+        margin-top: 1em;
+      }
+    }
+    .notes-container {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+
+      .view-notes {
+        margin-top: 1em;
+      }
+    }
+  }
+}

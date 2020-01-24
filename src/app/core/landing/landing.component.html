@@ -1,0 +1,48 @@
+<div class="landing-container">
+  <div class="container-fluid">
+    <div class="welcome-container">
+      <h1 class="title">
+        Welcome to BookWorms!
+      </h1>
+    </div>
+
+    <div class="floating-nav">
+      <h2>
+        What is this website?
+      </h2>
+
+      <p>
+        This is just a side project to sharp my Angular skills, but it is a
+        working app indeed.
+      </p>
+      <p>
+        In this site you can:
+      </p>
+
+      <ul>
+        <li>Add books you are reading</li>
+        <li>Add words, its definition and in wich bookyou find it</li>
+        <li>QUIZ yourself with an interactive memory game</li>
+      </ul>
+
+      <p>
+        Sounds interesting?
+      </p>
+      <p class="click-here">
+        <a
+          [routerLink]="['/books']"
+          routerLinkActive="router-link-active"
+          class="link"
+        >
+          Click here to start NOW</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <div class="footer d-flex justify-content-center">
+    <a target="_blank" href="http://www.linkedin.com/in/gaabmarquez">
+      © 2020, Created by Gabriel Márquez</a
+    >
+  </div>
+</div>

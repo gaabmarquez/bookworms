@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <h1 class="mb-4">
+    My books
+  </h1>
+
+  <div class="books-container ">
+    <div class="card book-card">
+      <div class="book-info-container">
+        <div class="img-container mb-4 d-flex justify-content-center">
+          <img
+            class="card-img-top"
+            src="assets/img/dabook.png"
+            alt="Add new book"
+          />
+        </div>
+        <div class="card-body mt-4">
+          <h5 class="book-name">Add new book</h5>
+          <p class="author mb-4">
+            <b>
+              Click the button below to add a new book
+            </b>
+          </p>
+        </div>
+      </div>
+
+      <div class="notes-container">
+        <a href="#" class="btn btn-info view-notes"> ADD BOOK</a>
+      </div>
+    </div>
+
+    <div *ngFor="let book of books" class="card book-card">
+      <div class="book-info-container">
+        <div class="img-container mb-4 d-flex justify-content-center">
+          <img class="card-img-top" [src]="book.img" alt="Card image cap" />
+        </div>
+        <div class="card-body mt-4">
+          <h5 class="book-name">{{ book.name | trim: 64 }}</h5>
+          <p class="author mb-4">
+            <b>
+              Author:
+            </b>
+            {{ book.author }}
+          </p>
+        </div>
+      </div>
+
+      <div class="notes-container">
+        <a
+          [routerLink]="['/books', book.id]"
+          class="btn btn-info view-notes"
+        >
+          View notes and words</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
