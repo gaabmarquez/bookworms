@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './core/navigation/navigation.component';
 import { LandingComponent } from './core/landing/landing.component';
-import { BooksComponent } from './books/books.component';
+import { BooksComponent } from './books/books/books.component';
 import { TrimPipe } from './share/trim.pipe';
 import { BookDetailComponent } from './books/book-detail/book-detail.component';
 
@@ -14,8 +14,6 @@ import { BookDetailComponent } from './books/book-detail/book-detail.component';
     AppComponent,
     NavigationComponent,
     LandingComponent,
-    // BooksComponent,
-    // TrimPipe,
   ],
   imports: [
     BrowserModule,

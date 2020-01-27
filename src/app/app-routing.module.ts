@@ -1,4 +1,4 @@
-import { BooksComponent } from './books/books.component';
+import { BooksComponent } from './books/books/books.component';
 import { LandingComponent } from './core/landing/landing.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';

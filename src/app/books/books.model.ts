@@ -1,8 +1,9 @@
 export class Book {
   constructor(
-    public id: number,
+    public id: string,
     public name: string,
     public author: string,
-    public img: string
-  ) {}
+    public img: string,
+    public notes?: string
+  ) { }
 }

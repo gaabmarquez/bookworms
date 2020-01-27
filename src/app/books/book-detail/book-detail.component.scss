@@ -1,0 +1,110 @@
+.book-info-container {
+  padding: 15px;
+  margin-bottom: 4em;
+  border-radius: 15px;
+}
+
+.table-container {
+  padding: 15px;
+  margin-bottom: 5em;
+  border-radius: 15px;
+}
+
+.action-links {
+  display: flex;
+  justify-content: space-between;
+
+  .go-back {
+    text-decoration: underline;
+  }
+}
+
+.book-name {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.book-author {
+  font-style: italic;
+}
+
+
+.img-container {
+  $width: 300px;
+  width: $width;
+  height: $width * 1.6;
+}
+
+.notes {
+  min-width: 30vw;
+  min-height: 40vh;
+
+}
+
+@media(max-width: 1200px) {
+  .notes {
+    min-width: 40vw;
+  }
+
+  .cover-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media(max-width: 768px) {
+  .notes {
+    min-width: 50vw;
+  }
+
+  .img-container {
+    $width: 200px;
+    width: $width;
+    height: $width * 1.6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.word-container {
+  border: 1px solid black;
+  margin-bottom: 1em;
+  padding: 15px;
+}
+
+.edit-notes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-notes {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.notes-actions {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.word-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .add-new-word {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      font-size: 1.05em;
+    }
+  }
+}

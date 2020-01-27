@@ -1,0 +1,45 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">
+      {{isEdit? 'Edit ': 'Add '}}
+      book
+    </h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="bookName">Name:</label>
+        <input [(value)]="bookName" id="bookName" class="form-control" placeholder="Book Name" name="dp">
+      </div>
+
+      <div class="form-group">
+        <label for="author">Author:</label>
+        <input [(value)]="bookAuthor" id="author" class="form-control" placeholder="Author Name" name="dp">
+      </div>
+
+
+      <div class="form-group">
+        <label for="author">Book cover:</label>
+
+        <div class="img-container">
+          <span style="color:red;" *ngIf="message">{{message}}</span>
+
+
+          <span *ngIf="!imgURL" >
+           Choose file <input #fileInput type="file" accept='image/*' (change)="preview(fileInput.files)" single>
+          </span>
+
+          <img *ngIf="imgURL" [src]="imgURL" height="auto" width="200" class="mt-2">
+          <span *ngIf="imgURL" class="remove-cover" (click)="imgURL=undefined;">Remove Cover</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-secondary">Cancel</button>
+        <button class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </div>

@@ -1,1 +1,75 @@
-<p>book-detail works!</p>
+<div class="container mb-5">
+  <div class="action-links">
+    <a [routerLink]="['/books']" class="go-back">
+        ← Go Back
+    </a>
+
+    <button class="btn btn-primary" (click)="onEditBook()">
+      Edit book info
+    </button>
+
+  </div>
+  <br>
+
+  <div class="book-info-container">
+    <h4 class="book-name mt-2">
+      {{book?.name}}
+    </h4>
+    <span class="book-author">&nbsp; By: {{book?.author}}</span>
+
+    <div class="row mt-4 mb-4">
+      <div class="col-md-6 cover-container">
+        <div class="img-container mb-4 d-flex justify-content-center">
+          <img class="card-img-top" [src]="book.img" alt="Card image cap" />
+        </div>
+      </div>
+      <div class="col-md-6">
+      <div class="edit-notes-container">
+        <h3>Notes</h3>
+
+        <span class="notes-actions"> {{book.notes? 'Edit': '+ Add'}} notes</span>
+       
+      </div>
+        <p>
+          {{book.notes}}
+        </p>
+
+        <!-- <button class="btn btn-primary edit-notes">Edit notes</button> -->
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="table-container">
+    <div class="word-title-container">
+      <h2 class="mt-2 mb-3">Words</h2>
+      <span class="add-new-word">Add new word</span>
+
+    </div>
+    <table class="table table-bordered mt-4">
+      <thead>
+        <th>Word</th>
+        <th>Description</th>
+        <!-- <th>Founded in pages:</th> -->
+      </thead>
+      <tbody>
+        <tr *ngFor="let word of words">
+          <td>
+            {{word.word}}
+          </td>
+          <td>
+            {{word.description}}
+          </td>
+
+          <!-- <td>
+            [{{word.pages}}]
+          </td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<app-add-edit-book #bookModal ></app-add-edit-book>
