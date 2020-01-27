@@ -5,10 +5,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'landing', pathMatch:'full'},
-  {path: 'landing', component: LandingComponent},
+  { path: '', redirectTo: 'landing', pathMatch: 'full' },
+  { path: 'landing', component: LandingComponent },
   { path: 'books', loadChildren: () => import('./books/books.module').then(m => m.BooksModule) },
-  {path: '**', redirectTo: 'book', pathMatch:'full'},
+  { path: '**', redirectTo: 'book', pathMatch: 'full' },
 
 
 
