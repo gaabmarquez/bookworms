@@ -3,7 +3,34 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
 
+$primary: #d45d79;
+$secondary: #32407b;
+
 body {
   //   font-family: "Lato", sans-serif;
   font-family: "Raleway", sans-serif;
+
+
+}
+
+
+.btn-action {
+  background-color: $primary !important;
+  border-color: #d45d79 !important;
+  color: white;
+
+  &:hover,
+  &:focus &:active {
+    border-color: #d45d79 !important;
+    color: white;
+  }
+
+}
+
+
+.required-field {
+  &::after {
+    content: '*';
+    font-weight: bold;
+  }
 }

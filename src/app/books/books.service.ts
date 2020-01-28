@@ -28,7 +28,7 @@ export class BooksService {
     ),
     new Book(
       "4",
-      "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future- THe fantastic book about cool shit nigga",
+      "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future- THe fantastic book about cool stuff",
       "Ashlee Vance",
       "https://images-na.ssl-images-amazon.com/images/I/5112YFsXIJL._SX330_BO1,204,203,200_.jpg"
     )

@@ -1,3 +1,4 @@
+import { SharedModule } from './../share/shared.module';
 import { TrimPipe } from "./../share/trim.pipe";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
@@ -9,8 +10,9 @@ import { AddEditBookComponent } from './add-edit-book/add-edit-book.component';
 import { NgbModalModule, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
-  declarations: [BooksComponent, BookDetailComponent, TrimPipe, AddEditBookComponent],
-  imports: [CommonModule, BooksRoutingModule, NgbModalModule, NgbDatepickerModule, FormsModule]
+  declarations: [BooksComponent, BookDetailComponent, AddEditBookComponent],
+  imports: [CommonModule, BooksRoutingModule, NgbModalModule, NgbDatepickerModule, FormsModule, SharedModule]
 })
 export class BooksModule { }

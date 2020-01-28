@@ -26,18 +26,22 @@
     .book-info-container {
       min-height: 400px;
       margin-bottom: 2em;
+
       .book-name {
         font-weight: bold;
         font-size: 1.5em;
       }
+
       .book-icon {
         font-size: 5em;
         margin-top: 1em;
       }
+
       .author {
         margin-top: 1em;
       }
     }
+
     .notes-container {
       position: absolute;
       bottom: 10px;
@@ -45,10 +49,23 @@
       right: 0;
       margin-left: auto;
       margin-right: auto;
+      color: white;
 
       .view-notes {
         margin-top: 1em;
+
+        &:focus {
+          border: none;
+        }
       }
     }
   }
+}
+
+
+.add-new-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

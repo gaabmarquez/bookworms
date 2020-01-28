@@ -1,4 +1,4 @@
-<ng-template #content let-modal>
+<ng-template #content let-modal let-c="close">
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">
       {{isEdit? 'Edit ': 'Add '}}
@@ -9,37 +9,26 @@
     </button>
   </div>
   <div class="modal-body">
-    <form>
+    <div class="container py-2 px-5">
       <div class="form-group">
-        <label for="bookName">Name:</label>
+        <label for="bookName" class="required-field">Name:</label>
         <input [(value)]="bookName" id="bookName" class="form-control" placeholder="Book Name" name="dp">
       </div>
 
-      <div class="form-group">
-        <label for="author">Author:</label>
+      <div class="form-group form-section">
+        <label for="author" class="required-field">Author:</label>
         <input [(value)]="bookAuthor" id="author" class="form-control" placeholder="Author Name" name="dp">
       </div>
 
-
-      <div class="form-group">
-        <label for="author">Book cover:</label>
-
-        <div class="img-container">
-          <span style="color:red;" *ngIf="message">{{message}}</span>
-
-
-          <span *ngIf="!imgURL" >
-           Choose file <input #fileInput type="file" accept='image/*' (change)="preview(fileInput.files)" single>
-          </span>
-
-          <img *ngIf="imgURL" [src]="imgURL" height="auto" width="200" class="mt-2">
-          <span *ngIf="imgURL" class="remove-cover" (click)="imgURL=undefined;">Remove Cover</span>
-        </div>
+      <div class="form-group form-section">
+        <label class="font-weight-bold">Book cover:</label>
+        <app-image-upload [(imgURL)]="imgUrl" (imgURLChange)="fuc()" removeMessage="Remove that thing">
+        </app-image-upload>
       </div>
 
       <div class="actions">
-        <button class="btn btn-secondary">Cancel</button>
-        <button class="btn btn-primary">Save</button>
+        <button class="btn btn-secondary" (click)="c('')">Cancel</button>
+        <button class="btn btn-action" (click)="onSave()">Save</button>
       </div>
-    </form>
+    </div>
   </div>

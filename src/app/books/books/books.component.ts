@@ -1,5 +1,6 @@
 import { BooksService } from "../books.service";
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { AddEditBookComponent } from '../add-edit-book/add-edit-book.component';
 
 @Component({
   selector: "app-books",
@@ -8,10 +9,18 @@ import { Component, OnInit } from "@angular/core";
 })
 export class BooksComponent implements OnInit {
   books = [];
+
+  @ViewChild('bookModal', { static: false }) bookModal: AddEditBookComponent;
+
   constructor(private booksService: BooksService) { }
 
   ngOnInit() {
     this.booksService.getBooks().subscribe(resp => this.books = resp)
 
+  }
+
+  onAddBook() {
+    console.log(this.bookModal)
+    this.bookModal.open();
   }
 }

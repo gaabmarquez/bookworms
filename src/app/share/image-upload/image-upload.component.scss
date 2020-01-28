@@ -1,0 +1,20 @@
+.img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.btn-upload {
+  background-color: #ea9085;
+  color: white;
+}
+
+
+.remove-element {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 1em;
+  cursor: pointer;
+}

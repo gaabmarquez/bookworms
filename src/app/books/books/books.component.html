@@ -5,15 +5,13 @@
 
   <div class="books-container ">
     <div class="card book-card">
-      <div class="book-info-container">
-        <div class="img-container mb-4 d-flex justify-content-center">
-          <img
-            class="card-img-top"
-            src="assets/img/dabook.png"
-            alt="Add new book"
-          />
-        </div>
-        <div class="card-body mt-4">
+      <div class="book-info-container ">
+
+        <div class="card-body mt-4 ">
+          <div class="img-container add-new-container">
+            <i class="fas fa-book-open fa-10x"></i>
+          </div>
+
           <h5 class="book-name">Add new book</h5>
           <p class="author mb-4">
             <b>
@@ -22,9 +20,14 @@
           </p>
         </div>
       </div>
+      <!-- 
+      <div class="notes-container">
+        <a (click)="onNewBook()" class="btn btn-action">ADD BOOK</a>
+      </div> -->
 
       <div class="notes-container">
-        <a href="#" class="btn btn-info view-notes">ADD BOOK</a>
+        <a (click)="onAddBook()" class="btn btn-action view-notes">
+          Add new book</a>
       </div>
     </div>
 
@@ -45,10 +48,13 @@
       </div>
 
       <div class="notes-container">
-        <a [routerLink]="['/books', book.id]" class="btn btn-info view-notes">
-          View notes and words</a
-        >
+        <a [routerLink]="['/books', book.id]" class="btn btn-action view-notes">
+          View notes and words</a>
       </div>
     </div>
   </div>
 </div>
+
+
+
+<app-add-edit-book #bookModal></app-add-edit-book>

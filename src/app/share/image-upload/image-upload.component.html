@@ -1,0 +1,14 @@
+<div class="img-container">
+  <span style="color:red;" *ngIf="message">{{message}}</span>
+
+
+  <span *ngIf="!imgURL">
+    <input #fileInput type="file" accept='image/*' (change)="preview(fileInput.files)" single class="d-none">
+    <button class="btn btn-upload" (click)="fileInput.click()">
+      <i class="fas fa-cloud-upload-alt"></i>
+      Choose file</button>
+  </span>
+
+  <img *ngIf="imgURL" [src]="imgURL" height="auto" width="200" class="mt-2">
+  <span *ngIf="imgURL" class="remove-element" (click)="onRemove()">{{removeMessage}}</span>
+</div>
