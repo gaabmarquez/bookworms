@@ -34,7 +34,7 @@
     <div *ngFor="let book of books" class="card book-card">
       <div class="book-info-container">
         <div class="img-container mb-4 d-flex justify-content-center">
-          <img class="card-img-top" [src]="book.img" alt="Card image cap" />
+          <img [routerLink]="['/books', book.id]" class="card-img-top pointer" [src]="book.img" alt="Card image cap" />
         </div>
         <div class="card-body mt-4">
           <h5 class="book-name">{{ book.name | trim: 64 }}</h5>

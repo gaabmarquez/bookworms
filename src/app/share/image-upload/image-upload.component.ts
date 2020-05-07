@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-image-upload',
@@ -31,7 +30,7 @@ export class ImageUploadComponent implements OnInit {
 
   message;
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
   ngOnInit() {
   }

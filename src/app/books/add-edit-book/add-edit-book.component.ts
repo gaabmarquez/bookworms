@@ -57,5 +57,7 @@ export class AddEditBookComponent implements OnInit {
   fuc() {
     console.log('shit', this.imgUrl)
   }
-
+  onSave(){
+    
+  }
 }
